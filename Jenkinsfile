@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Dev Test to Starts'
         git(url: 'https://github.com/GopinathJayakumar/Sample', poll: true)
-        bat(script: 'mvnw package', label: 'Dev')
+        sh 'mvnw package'
       }
     }
 
